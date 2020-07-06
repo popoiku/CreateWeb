@@ -1,0 +1,225 @@
+/*-----------------------------------------------------------------------------
+ ■ variable declaration
+-----------------------------------------------------------------------------*/
+
+:root {
+  /* color */
+  --mat-color: #FFFFFF;
+  --tableborder-color: #EEEEEE;
+  --thisyear-color: #014C86;
+  --submit-color: #4472C4;
+ 
+  /* margin & padding */
+  --mainblock-margin: 0 0.8% 0.8% 0.8%;
+  --mainblock-padding: 2%;
+
+  /* border */
+  --main-radius: 8px;
+  --insert-box: 1px solid #84898C;
+  
+}
+
+/*-----------------------------------------------------------------------------
+ ■ anime title
+-----------------------------------------------------------------------------*/
+
+.addanime {
+  width: auto;
+  margin: 0.8%;
+  
+  display: flex;
+  
+  flex-wrap: wrap;
+  
+  justify-content: space-around;
+  
+  border-radius: var(--main-radius);
+  background-color: var(--mat-color);
+}
+
+.addanime__titleblock {
+  width: 40%;
+  min-width: 300px;
+  padding: var(--mainblock-padding);
+
+  display: flex;
+  
+  flex-direction: column;
+}
+
+.addanime__titleblock--label {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.addanime__titleblock--input {
+  padding: 4px;
+  border-radius: 4px;
+  border: var(--insert-box);
+}
+
+/*-----------------------------------------------------------------------------
+ ■ anime schedule
+-----------------------------------------------------------------------------*/
+
+.addschedule {
+  margin: var(--mainblock-margin);
+  padding: var(--mainblock-padding);
+  border-radius: var(--main-radius);
+  background-color: var(--mat-color);
+}
+
+.addtable {
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.addtable input {
+  padding: 4px;
+  border-radius: 4px;
+  border: var(--insert-box);
+
+}
+
+.addtable select {
+  margin: 0 1%;
+  padding: 4px;
+  border-radius: 4px;
+  border: var(--insert-box);
+}
+
+.addtable th, td {
+  padding: 32px;
+  border-bottom: 1px solid var(--tableborder-color);
+}
+
+/*-----------------------------------------------------------------------------
+ ■ button
+-----------------------------------------------------------------------------*/
+
+.addbutton {
+  margin: var(--mainblock-margin);
+  padding: var(--mainblock-padding);
+
+  display: flex;
+  
+  justify-content: flex-end;
+}
+
+.addbutton__appearance {
+  margin-right: 8px;
+}
+
+.addbutton__appearance--button {
+  color: var(--mat-color);
+  border-radius: 8px;
+  padding: 4px 16px;
+  background-color: var(--thisyear-color);
+}
+
+.addsubmit {
+  margin: var(--mainblock-margin);
+  padding: var(--mainblock-padding);
+  text-align: center;
+}
+
+.addsubmit--button {
+  color: var(--mat-color);
+  padding: 8px 24px;
+  border-radius: var(--main-radius);
+  background-color: var(--submit-color);
+}
+
+/*-----------------------------------------------------------------------------
+ ■ notice
+-----------------------------------------------------------------------------*/
+
+.complete {
+  margin: 0 0.8% 0.8% 0.8%;
+  padding: 2%;
+  color: #2e8b57;
+  border: 1px solid #2e8b57;
+}
+
+.error {
+  margin: 0 0.8% 0.8% 0.8%;
+  padding: 2%;
+  color: #ff0000;
+  border: 1px solid #ff0000;
+}
+
+
+
+/*-----------------------------------------------------------------------------
+ ■ Responsive
+-----------------------------------------------------------------------------*/
+
+/* Laptop L */
+/* @media screen and (max-width: 1440px) {
+
+} */
+
+/* Laptop */
+/* @media screen and (max-width: 1024px) {
+
+} */
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+  
+  .addtable th {
+    display: none;
+  }
+  
+  .addtable td {
+    display: block;
+    padding: 16px;
+    border-bottom: 1px dashed var(--tableborder-color);
+  }
+  
+  .addtable td:last-child {
+    border-bottom: 1px solid var(--tableborder-color);
+  }
+  
+  td::before {
+    display: block;
+    content: attr(data-label);
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    /*color: #6A6C6C;*/
+  }
+    
+}
+
+/* Mobile L */
+
+@media screen and (max-width: 425px) {
+
+  .addanime__titleblock--label {
+    font-size: 1.2rem;
+  }
+
+  td::before {
+    font-size: 1.2rem;
+  }
+}
+
+/* Mobile S */
+/* @media screen and (max-width: 320px) {
+  
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+

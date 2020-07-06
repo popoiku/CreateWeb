@@ -1,0 +1,256 @@
+.log {
+  /* display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+  justify-content: space-between; */
+  
+  margin: 16px;
+}
+
+
+/*--------------------------------------------------------------------------------
+  ■　アクセスログ
+--------------------------------------------------------------------------------*/
+
+
+.log__access {
+  margin: 0 0 16px 0;
+  background-color: #FFFFFF;
+}
+
+.access--input {
+  display: none;
+}
+
+.access--label {
+  font-weight: bold;
+  display: block;
+  padding: 8px 16px;
+  background-color: #AEE2FA;
+}
+
+.access__info {
+  height: 0;
+  visibility: hidden;
+}
+
+.access--input:checked + .access--label + .access__info {
+  height: 240px;
+  overflow: auto;
+  visibility: visible;
+}
+
+.access__info--table {
+  width: 100%;
+  font-size: 1.4rem;
+  overflow: auto;
+}
+
+.access__info--table th {
+  position: sticky;
+  top: 0;
+  padding: 8px 4px;
+  background-color: #EEEEEE;
+}
+
+.access__info--table td {
+  padding: 16px 4px;
+  text-align: center;
+  border-bottom: 2px solid #EEEEEE;
+
+}
+
+
+/*--------------------------------------------------------------------------------
+  ■　編集ログ
+--------------------------------------------------------------------------------*/
+
+
+.log__edit {
+  background-color: #FFFFFF;
+}
+
+.edit--input {
+  display: none;
+}
+
+.edit--label {
+  font-weight: bold;
+  display: block;
+  padding: 8px 16px;
+  background-color: #AEE2FA;
+}
+
+.edit__info {
+  height: 0;
+  visibility: hidden;
+}
+
+.edit--input:checked + .edit--label + .edit__info {
+  height: 240px;
+  overflow: auto;
+  visibility: visible;
+}
+
+.edit__info--table {
+  width: 100%;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.edit__info--table th {
+  position: sticky;
+  top: 0;
+  padding: 8px 4px;
+  background-color: #EEEEEE;
+}
+
+.edit__info--table td {
+  padding: 16px 4px;
+  text-align: center;
+  border-bottom: 2px solid #EEEEEE;
+}
+
+
+/*--------------------------------------------------------------------------------
+  ■　アニメ一覧
+--------------------------------------------------------------------------------*/
+
+
+.container__anime {
+  min-height: 64vh;
+  margin: 0 16px;
+  padding: 16px;
+  background-color: white;
+}
+
+.anime__manipulate--selectbox {
+  width: 100%;
+  padding: 4px 16px;
+  text-align: center;
+}
+
+.anime__manipulate button {
+  padding: 4px 8px;
+  color: white;
+  background-color: #4472C4;
+  border-radius: 8px;
+}
+
+
+.anime__manipulate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+  padding: 0 0 16px 0;
+  border-bottom: 1px solid #EEEEEE;
+
+}
+
+.broadcast__listbrock {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+
+  padding: 16px 0;
+  border-bottom: 1px solid #EEEEEE;
+}
+
+.broadcast__listbrock--button {
+  margin: 0px 8px;
+}
+
+.broadcast__listbrock img {
+  height: 20px;
+  width: 20px;
+}
+
+.broadcast__error {
+  margin: 32px;
+  text-align: center;
+}
+
+
+
+/*--------------------------------------------------------------------------------
+  ■　レスポンシブ
+--------------------------------------------------------------------------------*/
+
+
+/* Laptop L */
+/* @media screen and (max-width: 1440px) {
+
+} */
+
+/* Laptop */
+/* @media screen and (max-width: 1024px) {
+
+
+} */
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+
+  .access__info--table th {
+    display: none;
+  }
+
+  .edit__info--table th {
+    display: none;
+  }
+
+  .access__info--table td {
+    display: block;
+    border-bottom: 1px solid #EEEEEE;
+  }
+
+   td::before {
+    display: block;
+    content: attr(data-label);
+    font-size: 0.7rem;
+    margin-bottom: 8px;
+    color: #6A6C6C;
+  }
+
+
+  .access__info--table td:first-child {
+    border-top: 8px solid #EEEEEE;
+  }
+
+  .edit__info--table td {
+    display: block;
+    border-bottom: 1px solid #EEEEEE;
+
+  }
+
+  .edit__info--table td:first-child {
+    border-top: 8px solid #EEEEEE;
+  }
+
+}
+
+/* Mobile L */
+@media screen and (max-width: 425px) {
+
+  .broadcast__listbrock {
+    font-size: 0.9rem;
+    display: block;
+    text-align: center;
+  }
+
+  .broadcast__listbrock--button {
+    margin-top: 16px;
+  }
+
+}
+
+/* Mobile S */
+/* @media screen and (max-width: 320px) {
+  
+} */
