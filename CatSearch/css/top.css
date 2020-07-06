@@ -1,0 +1,132 @@
+
+.searchblock {
+  /* width: 100%; */
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchblock__list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchblock__list h2 {
+  font-size: 1.6rem;
+  margin: 0 16px 0 0;
+}
+
+.searchblock__inputfield {
+  background-color: white;
+  margin: 0 0 0 16px;
+  padding: 4px;
+  border-radius: 4px;
+  box-shadow: 0 0 8px gray ;
+}
+
+
+input.searchblock__inputfield--intext {
+  width: 400px;
+  height: 24px;
+  font-size: 1rem;
+  border: none;
+  border-right: 1px solid gray;
+}
+
+.searchblock__inputfield--inimg {
+  margin: 4px 8px 4px 4px;
+  width: 24px;
+  height: 24px;
+}
+
+.catalog {
+  font-size: 0.5rem;
+  margin: 10px;
+  display: grid;
+  gap: 10px;
+  grid-auto-flow: row dense;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+}
+
+.catalog img {
+  width: 280px;
+  height: 280px;
+  object-fit: contain;
+}
+
+.item {
+  text-align: center;
+  background-color: white;
+  padding: 4px;
+  position: relative;
+}
+
+.item p {
+  position: absolute;
+  padding: 0 4px;
+  top: 5px;
+  left: 5px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.nohit {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.item button {
+  width: 100%;
+}
+
+
+/* Laptop L */
+/* @media screen and (max-width: 1440px) {
+
+
+} */
+
+/* Laptop */
+/* @media screen and (max-width: 1024px) {
+
+
+} */
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+  
+  .searchblock__list {
+    display: block;
+  }
+
+  .searchblock__list h2 {
+    margin: 0 0 38px 0;
+    text-align: center;
+  }
+
+  .searchblock__inputfield {
+    margin: 0;
+  }
+
+}
+
+/* Mobile L */
+@media screen and (max-width: 480px) {
+
+  input.searchblock__inputfield--intext {
+    width: 240px;
+  }
+
+}
+
+/* Mobile S */
+@media screen and (max-width: 320px) {
+
+  input.searchblock__inputfield--intext {
+    width: 200px;
+  }
+  
+}

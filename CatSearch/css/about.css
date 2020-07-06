@@ -1,0 +1,13 @@
+.about {
+  height: 100%;
+  margin: 32px 10px;
+  font-size: 1rem;
+}
+
+.about__supplement {
+  margin: 24px 0;
+}
+
+.about__supplement h1 {
+  font-size: 1.2rem;
+}
